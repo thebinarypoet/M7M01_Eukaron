@@ -2,7 +2,8 @@
 TARGET=RMP
 CPU=-m64
 
-CFLAGS=-O3 -fmessage-length=0
+CC=clang
+CFLAGS=-O3 -fmessage-length=0 -w
 WFLAGS=-Wall
 DFLAGS=-g3
 OBJDIR=Object
@@ -13,8 +14,8 @@ INCS+=-I.
 INCS+=-I/usr/include/x86_64-linux-gnu
 INCS+=-I../../Include
 
-CSRCS+=../../Source/Platform/X64/rme_platform_x64.c
 CSRCS+=../../Source/Kernel/rme_kernel.c
+CSRCS+=../../Source/Platform/X64/rme_platform_x64.c
 CSRCS+=../../Source/Benchmark/rme_benchmark.c
 
 LIBS=-lpthread
@@ -41,13 +42,14 @@ mkdir:
 # Compile C sources
 %.o:%.c
 	@echo "    CC      $(notdir $<)"
-	@clang -c $(CPU) $(INCS) $(CFLAGS) $(DFLAGS) $(WFLAGS) -MMD -MP -MF "$(DEP)" "$<" -o "$(OBJ)";
+	@$(CC) -c $(CPU) $(INCS) $(CFLAGS) $(DFLAGS) $(WFLAGS) -MMD -MP -MF "$(DEP)" "$<" -o "$(OBJ)";
 
 $(TARGET): $(COBJS)
 	@echo "    BIN     $(notdir $@)"
-	@clang $(OBJDIR)/*.o $(CPU) -static $(LIBS) -o $(OBJ)
+	@$(CC) $(OBJDIR)/*.o $(CPU) -static $(LIBS) -o $(OBJ)
 
 # Clean up
+.PHONY: clean
 clean:
 	-rm -rf $(OBJDIR)
 
