@@ -4628,7 +4628,7 @@ static rme_ret_t _RME_Run_Swt(struct RME_Reg_Struct* Reg,
     {
         RME_COV_MARKER();
         
-        __RME_Pgt_Set(Pgt_New);
+        __RME_Pgt_Set((rme_ptr_t)Pgt_New);
     }
     else
     {
@@ -7656,7 +7656,7 @@ static rme_ret_t _RME_Inv_Act(struct RME_Cap_Cpt* Cpt,
 #if(RME_PGT_RAW_ENABLE==0U)
     RME_ASSERT(RME_CAP_IS_ROOT(Invocation->Prc->Pgt)!=0U);
 #endif
-    __RME_Pgt_Set(Invocation->Prc->Pgt);
+    __RME_Pgt_Set((rme_ptr_t)Invocation->Prc->Pgt);
     
     return 0;
 }
@@ -7744,7 +7744,7 @@ static rme_ret_t _RME_Inv_Ret(struct RME_Reg_Struct* Reg,
 #if(RME_PGT_RAW_ENABLE==0U)
         RME_ASSERT(RME_CAP_IS_ROOT(Invocation->Prc->Pgt)!=0U);
 #endif
-        __RME_Pgt_Set(Invocation->Prc->Pgt);
+        __RME_Pgt_Set((rme_ptr_t)Invocation->Prc->Pgt);
     }
     else
     {
@@ -7753,7 +7753,7 @@ static rme_ret_t _RME_Inv_Ret(struct RME_Reg_Struct* Reg,
 #if(RME_PGT_RAW_ENABLE==0U)
         RME_ASSERT(RME_CAP_IS_ROOT(Thread->Sched.Prc->Pgt)!=0U);
 #endif
-        __RME_Pgt_Set(Thread->Sched.Prc->Pgt);
+        __RME_Pgt_Set((rme_ptr_t)Thread->Sched.Prc->Pgt);
     }
     
     return 0;

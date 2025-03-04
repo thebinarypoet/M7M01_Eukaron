@@ -1155,7 +1155,7 @@ static rme_ret_t _RME_Kfn_Act(struct RME_Cap_Cpt* Cpt,
 /* Public Variable ***********************************************************/
 /* __HDR_PUBLIC__ */
 #else
-#define __RME_EXTERN__ RME_EXTERN 
+#define __RME_EXTERN__ RME_EXTERN
 /* __HDR_PUBLIC__ */
 #endif
 

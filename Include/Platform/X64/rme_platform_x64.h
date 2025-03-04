@@ -107,7 +107,7 @@ typedef rme_s64_t rme_ret_t;
 /* The order of bits in one CPU machine word */
 #define RME_WORD_ORDER                       6
 /* Forcing VA=PA in user memory segments */
-#define RME_VA_EQU_PA                        (RME_FALSE)
+#define RME_VA_EQU_PA                        0
 /* Quiescence timeslice value - always 10 slices, roughly equivalent to 100ms */
 #define RME_QUIE_TIME                        10
 /* Cpt size limit - not restricted, user-level decides this */
@@ -179,6 +179,28 @@ static INLINE rme_ptr_t _RME_X64_MSB_Get(rme_ptr_t Val)
 	                     :"cc");
 	return Ret;
 }
+
+static INLINE rme_ptr_t __RME_Int_Disable()
+{
+
+}
+
+static INLINE rme_ptr_t __RME_Int_Enable()
+{
+
+}
+
+static INLINE rme_ptr_t __RME_User_Enter()
+{
+
+}
+
+
+static INLINE rme_ptr_t __RME_Lowlvl_Init()
+{
+
+}
+
 #define RME_COMP_SWAP(PTR,OLD,NEW)           _RME_X64_Comp_Swap(PTR,OLD,NEW)
 #define RME_FETCH_ADD(PTR,ADDEND)            _RME_X64_Fetch_Add(PTR,ADDEND)
 #define RME_FETCH_AND(PTR,OPERAND)           _RME_X64_Fetch_And(PTR,OPERAND)
@@ -741,6 +763,11 @@ struct RME_Reg_Struct
     rme_ptr_t SS;
 };
 
+struct RME_Exc_Struct
+{
+
+};
+
 /* The coprocessor register set structure. MMX and SSE */
 struct RME_Cop_Struct
 {
@@ -887,6 +914,7 @@ struct __RME_X64_Kern_Pgt
 	rme_ptr_t PML4[256];
 	rme_ptr_t PDP[256][512];
 };
+
 /*****************************************************************************/
 /* __RME_PLATFORM_X64_STRUCT__ */
 #endif
@@ -1151,6 +1179,13 @@ EXTERN void __RME_X64_IDT_Load(rme_ptr_t* IDTR);
 EXTERN void __RME_X64_TSS_Load(rme_ptr_t TSS);
 EXTERN rme_ptr_t __RME_X64_CPUID_Get(rme_ptr_t EAX, rme_ptr_t* EBX, rme_ptr_t* ECX, rme_ptr_t* EDX);
 EXTERN void __RME_X64_Pgt_Set(rme_ptr_t Pgt);
+EXTERN void __RME_Svc_Param_Get(struct RME_Reg_Struct* Reg,rme_ptr_t* Svc,rme_ptr_t* Cid,rme_ptr_t* Param);
+EXTERN void __RME_Svc_Retval_Set(struct RME_Reg_Struct* Reg,rme_ret_t Retval);
+EXTERN void __RME_Inv_Retval_Set(struct RME_Reg_Struct* Reg,rme_ret_t Retval);
+EXTERN rme_ret_t __RME_Kfn_Handler(struct RME_Cap_Cpt* Cpt,struct RME_Reg_Struct* Reg,rme_ptr_t FuncID,rme_ptr_t SubID,rme_ptr_t Param1,rme_ptr_t Param2);
+EXTERN void __RME_List_Crt(struct RME_List* Head);
+EXTERN void __RME_List_Ins(struct RME_List* New,struct RME_List* Prev,struct RME_List* Next);
+EXTERN void __RME_List_Del(struct RME_List* Prev,struct RME_List* Next);
 /* Boot glue */
 EXTERN void __RME_X64_SMP_Boot_32(void);
 /* Vectors */
@@ -1456,7 +1491,7 @@ __EXTERN__ void __RME_Get_Syscall_Param(struct RME_Reg_Struct* Reg, rme_ptr_t* S
                                         rme_ptr_t* Capid, rme_ptr_t* Param);
 __EXTERN__ void __RME_Set_Syscall_Retval(struct RME_Reg_Struct* Reg, rme_ret_t Retval);
 /* Thread register sets */
-__EXTERN__ void __RME_Thd_Reg_Init(rme_ptr_t Entry, rme_ptr_t Stack, rme_ptr_t Param, struct RME_Reg_Struct* Reg);
+__EXTERN__ void __RME_Thd_Reg_Init(rme_ptr_t Attr,rme_ptr_t Entry, rme_ptr_t Stack, rme_ptr_t Param, struct RME_Reg_Struct* Reg);
 __EXTERN__ void __RME_Thd_Reg_Copy(struct RME_Reg_Struct* Dst, struct RME_Reg_Struct* Src);
 __EXTERN__ void __RME_Thd_Cop_Init(struct RME_Reg_Struct* Reg, struct RME_Cop_Struct* Cop_Reg);
 __EXTERN__ void __RME_Thd_Cop_Save(struct RME_Reg_Struct* Reg, struct RME_Cop_Struct* Cop_Reg);

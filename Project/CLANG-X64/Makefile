@@ -2,7 +2,7 @@
 TARGET=RMP
 CPU=-m64
 
-CC=clang
+CC=gcc
 CFLAGS=-O3 -fmessage-length=0 -w
 WFLAGS=-Wall
 DFLAGS=-g3
@@ -16,7 +16,7 @@ INCS+=-I../../Include
 
 CSRCS+=../../Source/Kernel/rme_kernel.c
 CSRCS+=../../Source/Platform/X64/rme_platform_x64.c
-CSRCS+=../../Source/Benchmark/rme_benchmark.c
+#CSRCS+=../../Source/Benchmark/rme_benchmark.c
 
 LIBS=-lpthread
 # End Source ##################################################################
