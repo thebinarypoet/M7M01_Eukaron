@@ -14,6 +14,7 @@ INCS+=-I.
 INCS+=-I/usr/include/x86_64-linux-gnu
 INCS+=-I../../Include
 
+CSRCS+=./UVM.c
 CSRCS+=../../Source/Kernel/rme_kernel.c
 CSRCS+=../../Source/Platform/X64/rme_platform_x64.c
 #CSRCS+=../../Source/Benchmark/rme_benchmark.c
