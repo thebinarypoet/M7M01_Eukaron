@@ -6,6 +6,7 @@ CC=gcc
 CFLAGS=-O3 -fmessage-length=0 -w
 WFLAGS=-Wall
 DFLAGS=-g3
+LDFLAGS=-ffreestanding -nostdlib
 OBJDIR=Object
 # End Config ##################################################################
 
@@ -18,7 +19,7 @@ CSRCS+=./UVM.c
 CSRCS+=../../Source/Kernel/rme_kernel.c
 CSRCS+=../../Source/Platform/X64/rme_platform_x64.c
 #CSRCS+=../../Source/Benchmark/rme_benchmark.c
-
+ASRCS+=../../Source/Platform/X64/rme_platform_x64_gcc.s
 LIBS=-lpthread
 # End Source ##################################################################
 
@@ -27,7 +28,8 @@ LIBS=-lpthread
 # End User ####################################################################
 
 # Build #######################################################################
-COBJS=$(CSRCS:%.c=%.o)
+COBJS+=$(CSRCS:%.c=%.o)
+COBJS+=$(ASRCS:%.s=%.o)
 CDEPS=$(CSRCS:%.c=%.d)
 
 DEP=$(OBJDIR)/$(notdir $(@:%.o=%.d))
@@ -45,9 +47,14 @@ mkdir:
 	@echo "    CC      $(notdir $<)"
 	@$(CC) -c $(CPU) $(INCS) $(CFLAGS) $(DFLAGS) $(WFLAGS) -MMD -MP -MF "$(DEP)" "$<" -o "$(OBJ)";
 
+#Assemble asm file
+%.o: %.s
+	@echo "    AS      $(notdir $<)"
+	@$(CC) -c $(CPU) $(INCS) $(CFLAGS) $(DFLAGS) $(WFLAGS) -MMD -MP -MF "$(DEP)" "$<" -o "$(OBJ)"
+
 $(TARGET): $(COBJS)
 	@echo "    BIN     $(notdir $@)"
-	@$(CC) $(OBJDIR)/*.o $(CPU) -static $(LIBS) -o $(OBJ)
+	@$(CC) $(OBJDIR)/*.o $(CPU) -static $(LIBS) $(LDFLAGS) -o $(OBJ)
 
 # Clean up
 .PHONY: clean

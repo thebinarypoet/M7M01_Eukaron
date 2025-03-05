@@ -62,462 +62,464 @@ int main(rme_ptr_t MBInfo)
 }
 /* End Function:main *********************************************************/
 
-/* Function:__RME_X64_FAULT_DE_Handler */
-void __RME_X64_FAULT_DE_Handler(void)
-{
-}
 
-/* End Function:__RME_X64_FAULT_DE_Handler */
 
-/* Function:__RME_X64_TRAP_DB_Handler */
-void __RME_X64_TRAP_DB_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_TRAP_DB_Handler */
-
-/* Function:__RME_X64_INT_NMI_Handler */
-void __RME_X64_INT_NMI_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_INT_NMI_Handler */
-
-/* Function:__RME_X64_TRAP_BP_Handler */
-void __RME_X64_TRAP_BP_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_TRAP_BP_Handler */
-
-/* Function:__RME_X64_TRAP_OF_Handler */
-void __RME_X64_TRAP_OF_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_TRAP_OF_Handler */
-
-/* Function:__RME_X64_FAULT_BR_Handler */
-void __RME_X64_FAULT_BR_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_BR_Handler */
-
-/* Function:__RME_X64_FAULT_UD_Handler */
-void __RME_X64_FAULT_UD_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_UD_Handler */
-
-/* Function:__RME_X64_FAULT_NM_Handler */
-void __RME_X64_FAULT_NM_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_NM_Handler */
-
-/* Function:__RME_X64_ABORT_DF_Handler */
-void __RME_X64_ABORT_DF_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_ABORT_DF_Handler */
-
-/* Function:__RME_X64_ABORT_OLD_MF_Handler */
-void __RME_X64_ABORT_OLD_MF_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_ABORT_OLD_MF_Handler */
-
-/* Function:__RME_X64_FAULT_TS_Handler */
-void __RME_X64_FAULT_TS_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_TS_Handler */
-
-/* Function:__RME_X64_FAULT_NP_Handler */
-void __RME_X64_FAULT_NP_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_NP_Handler */
-
-/* Function:__RME_X64_FAULT_SS_Handler */
-void __RME_X64_FAULT_SS_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_SS_Handler */
-
-/* Function:__RME_X64_FAULT_GP_Handler */
-void __RME_X64_FAULT_GP_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_GP_Handler */
-
-/* Function:__RME_X64_FAULT_PF_Handler */
-void __RME_X64_FAULT_PF_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_PF_Handler */
-
-/* Function:__RME_X64_FAULT_MF_Handler */
-void __RME_X64_FAULT_MF_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_MF_Handler */
-
-/* Function:__RME_X64_FAULT_AC_Handler */
-void __RME_X64_FAULT_AC_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_AC_Handler */
-
-/* Function:__RME_X64_ABORT_MC_Handler */
-void __RME_X64_ABORT_MC_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_ABORT_MC_Handler */
-
-/* Function:__RME_X64_FAULT_XM_Handler */
-void __RME_X64_FAULT_XM_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_XM_Handler */
-
-/* Function:__RME_X64_FAULT_VE_Handler */
-void __RME_X64_FAULT_VE_Handler(void)
-{
-}
-
-/* End Function:__RME_X64_FAULT_VE_Handler */
-
-/* Function:__RME_X64_USER_Handler */
-void __RME_X64_USER32_Handler(void) { }
-void __RME_X64_USER33_Handler(void) { }
-void __RME_X64_USER34_Handler(void) { }
-void __RME_X64_USER35_Handler(void) { }
-void __RME_X64_USER36_Handler(void) { }
-void __RME_X64_USER37_Handler(void) { }
-void __RME_X64_USER38_Handler(void) { }
-void __RME_X64_USER39_Handler(void) { }
-void __RME_X64_USER40_Handler(void) { }
-void __RME_X64_USER41_Handler(void) { }
-void __RME_X64_USER42_Handler(void) { }
-void __RME_X64_USER43_Handler(void) { }
-void __RME_X64_USER44_Handler(void) { }
-void __RME_X64_USER45_Handler(void) { }
-void __RME_X64_USER46_Handler(void) { }
-void __RME_X64_USER47_Handler(void) { }
-void __RME_X64_USER48_Handler(void) { }
-void __RME_X64_USER49_Handler(void) { }
-void __RME_X64_USER50_Handler(void) { }
-void __RME_X64_USER51_Handler(void) { }
-void __RME_X64_USER52_Handler(void) { }
-void __RME_X64_USER53_Handler(void) { }
-void __RME_X64_USER54_Handler(void) { }
-void __RME_X64_USER55_Handler(void) { }
-void __RME_X64_USER56_Handler(void) { }
-void __RME_X64_USER57_Handler(void) { }
-void __RME_X64_USER58_Handler(void) { }
-void __RME_X64_USER59_Handler(void) { }
-void __RME_X64_USER60_Handler(void) { }
-void __RME_X64_USER61_Handler(void) { }
-void __RME_X64_USER62_Handler(void) { }
-void __RME_X64_USER63_Handler(void) { }
-void __RME_X64_USER64_Handler(void) { }
-void __RME_X64_USER65_Handler(void) { }
-void __RME_X64_USER66_Handler(void) { }
-void __RME_X64_USER67_Handler(void) { }
-void __RME_X64_USER68_Handler(void) { }
-void __RME_X64_USER69_Handler(void) { }
-void __RME_X64_USER70_Handler(void) { }
-void __RME_X64_USER71_Handler(void) { }
-void __RME_X64_USER72_Handler(void) { }
-void __RME_X64_USER73_Handler(void) { }
-void __RME_X64_USER74_Handler(void) { }
-void __RME_X64_USER75_Handler(void) { }
-void __RME_X64_USER76_Handler(void) { }
-void __RME_X64_USER77_Handler(void) { }
-void __RME_X64_USER78_Handler(void) { }
-void __RME_X64_USER79_Handler(void) { }
-void __RME_X64_USER80_Handler(void) { }
-void __RME_X64_USER81_Handler(void) { }
-void __RME_X64_USER82_Handler(void) { }
-void __RME_X64_USER83_Handler(void) { }
-void __RME_X64_USER84_Handler(void) { }
-void __RME_X64_USER85_Handler(void) { }
-void __RME_X64_USER86_Handler(void) { }
-void __RME_X64_USER87_Handler(void) { }
-void __RME_X64_USER88_Handler(void) { }
-void __RME_X64_USER89_Handler(void) { }
-void __RME_X64_USER90_Handler(void) { }
-void __RME_X64_USER91_Handler(void) { }
-void __RME_X64_USER92_Handler(void) { }
-void __RME_X64_USER93_Handler(void) { }
-void __RME_X64_USER94_Handler(void) { }
-void __RME_X64_USER95_Handler(void) { }
-void __RME_X64_USER96_Handler(void) { }
-void __RME_X64_USER97_Handler(void) { }
-void __RME_X64_USER98_Handler(void) { }
-void __RME_X64_USER99_Handler(void) { }
-void __RME_X64_USER100_Handler(void) { }
-void __RME_X64_USER101_Handler(void) { }
-void __RME_X64_USER102_Handler(void) { }
-void __RME_X64_USER103_Handler(void) { }
-void __RME_X64_USER104_Handler(void) { }
-void __RME_X64_USER105_Handler(void) { }
-void __RME_X64_USER106_Handler(void) { }
-void __RME_X64_USER107_Handler(void) { }
-void __RME_X64_USER108_Handler(void) { }
-void __RME_X64_USER109_Handler(void) { }
-void __RME_X64_USER110_Handler(void) { }
-void __RME_X64_USER111_Handler(void) { }
-void __RME_X64_USER112_Handler(void) { }
-void __RME_X64_USER113_Handler(void) { }
-void __RME_X64_USER114_Handler(void) { }
-void __RME_X64_USER115_Handler(void) { }
-void __RME_X64_USER116_Handler(void) { }
-void __RME_X64_USER117_Handler(void) { }
-void __RME_X64_USER118_Handler(void) { }
-void __RME_X64_USER119_Handler(void) { }
-void __RME_X64_USER120_Handler(void) { }
-void __RME_X64_USER121_Handler(void) { }
-void __RME_X64_USER122_Handler(void) { }
-void __RME_X64_USER123_Handler(void) { }
-void __RME_X64_USER124_Handler(void) { }
-void __RME_X64_USER125_Handler(void) { }
-void __RME_X64_USER126_Handler(void) { }
-void __RME_X64_USER127_Handler(void) { }
-void __RME_X64_USER128_Handler(void) { }
-void __RME_X64_USER129_Handler(void) { }
-void __RME_X64_USER130_Handler(void) { }
-void __RME_X64_USER131_Handler(void) { }
-void __RME_X64_USER132_Handler(void) { }
-void __RME_X64_USER133_Handler(void) { }
-void __RME_X64_USER134_Handler(void) { }
-void __RME_X64_USER135_Handler(void) { }
-void __RME_X64_USER136_Handler(void) { }
-void __RME_X64_USER137_Handler(void) { }
-void __RME_X64_USER138_Handler(void) { }
-void __RME_X64_USER139_Handler(void) { }
-void __RME_X64_USER140_Handler(void) { }
-void __RME_X64_USER141_Handler(void) { }
-void __RME_X64_USER142_Handler(void) { }
-void __RME_X64_USER143_Handler(void) { }
-void __RME_X64_USER144_Handler(void) { }
-void __RME_X64_USER145_Handler(void) { }
-void __RME_X64_USER146_Handler(void) { }
-void __RME_X64_USER147_Handler(void) { }
-void __RME_X64_USER148_Handler(void) { }
-void __RME_X64_USER149_Handler(void) { }
-void __RME_X64_USER150_Handler(void) { }
-void __RME_X64_USER151_Handler(void) { }
-void __RME_X64_USER152_Handler(void) { }
-void __RME_X64_USER153_Handler(void) { }
-void __RME_X64_USER154_Handler(void) { }
-void __RME_X64_USER155_Handler(void) { }
-void __RME_X64_USER156_Handler(void) { }
-void __RME_X64_USER157_Handler(void) { }
-void __RME_X64_USER158_Handler(void) { }
-void __RME_X64_USER159_Handler(void) { }
-void __RME_X64_USER160_Handler(void) { }
-void __RME_X64_USER161_Handler(void) { }
-void __RME_X64_USER162_Handler(void) { }
-void __RME_X64_USER163_Handler(void) { }
-void __RME_X64_USER164_Handler(void) { }
-void __RME_X64_USER165_Handler(void) { }
-void __RME_X64_USER166_Handler(void) { }
-void __RME_X64_USER167_Handler(void) { }
-void __RME_X64_USER168_Handler(void) { }
-void __RME_X64_USER169_Handler(void) { }
-void __RME_X64_USER170_Handler(void) { }
-void __RME_X64_USER171_Handler(void) { }
-void __RME_X64_USER172_Handler(void) { }
-void __RME_X64_USER173_Handler(void) { }
-void __RME_X64_USER174_Handler(void) { }
-void __RME_X64_USER175_Handler(void) { }
-void __RME_X64_USER176_Handler(void) { }
-void __RME_X64_USER177_Handler(void) { }
-void __RME_X64_USER178_Handler(void) { }
-void __RME_X64_USER179_Handler(void) { }
-void __RME_X64_USER180_Handler(void) { }
-void __RME_X64_USER181_Handler(void) { }
-void __RME_X64_USER182_Handler(void) { }
-void __RME_X64_USER183_Handler(void) { }
-void __RME_X64_USER184_Handler(void) { }
-void __RME_X64_USER185_Handler(void) { }
-void __RME_X64_USER186_Handler(void) { }
-void __RME_X64_USER187_Handler(void) { }
-void __RME_X64_USER188_Handler(void) { }
-void __RME_X64_USER189_Handler(void) { }
-void __RME_X64_USER190_Handler(void) { }
-void __RME_X64_USER191_Handler(void) { }
-void __RME_X64_USER192_Handler(void) { }
-void __RME_X64_USER193_Handler(void) { }
-void __RME_X64_USER194_Handler(void) { }
-void __RME_X64_USER195_Handler(void) { }
-void __RME_X64_USER196_Handler(void) { }
-void __RME_X64_USER197_Handler(void) { }
-void __RME_X64_USER198_Handler(void) { }
-void __RME_X64_USER199_Handler(void) { }
-void __RME_X64_USER200_Handler(void) { }
-void __RME_X64_USER201_Handler(void) { }
-void __RME_X64_USER202_Handler(void) { }
-void __RME_X64_USER203_Handler(void) { }
-void __RME_X64_USER204_Handler(void) { }
-void __RME_X64_USER205_Handler(void) { }
-void __RME_X64_USER206_Handler(void) { }
-void __RME_X64_USER207_Handler(void) { }
-void __RME_X64_USER208_Handler(void) { }
-void __RME_X64_USER209_Handler(void) { }
-void __RME_X64_USER210_Handler(void) { }
-void __RME_X64_USER211_Handler(void) { }
-void __RME_X64_USER212_Handler(void) { }
-void __RME_X64_USER213_Handler(void) { }
-void __RME_X64_USER214_Handler(void) { }
-void __RME_X64_USER215_Handler(void) { }
-void __RME_X64_USER216_Handler(void) { }
-void __RME_X64_USER217_Handler(void) { }
-void __RME_X64_USER218_Handler(void) { }
-void __RME_X64_USER219_Handler(void) { }
-void __RME_X64_USER220_Handler(void) { }
-void __RME_X64_USER221_Handler(void) { }
-void __RME_X64_USER222_Handler(void) { }
-void __RME_X64_USER223_Handler(void) { }
-void __RME_X64_USER224_Handler(void) { }
-void __RME_X64_USER225_Handler(void) { }
-void __RME_X64_USER226_Handler(void) { }
-void __RME_X64_USER227_Handler(void) { }
-void __RME_X64_USER228_Handler(void) { }
-void __RME_X64_USER229_Handler(void) { }
-void __RME_X64_USER230_Handler(void) { }
-void __RME_X64_USER231_Handler(void) { }
-void __RME_X64_USER232_Handler(void) { }
-void __RME_X64_USER233_Handler(void) { }
-void __RME_X64_USER234_Handler(void) { }
-void __RME_X64_USER235_Handler(void) { }
-void __RME_X64_USER236_Handler(void) { }
-void __RME_X64_USER237_Handler(void) { }
-void __RME_X64_USER238_Handler(void) { }
-void __RME_X64_USER239_Handler(void) { }
-void __RME_X64_USER240_Handler(void) { }
-void __RME_X64_USER241_Handler(void) { }
-void __RME_X64_USER242_Handler(void) { }
-void __RME_X64_USER243_Handler(void) { }
-void __RME_X64_USER244_Handler(void) { }
-void __RME_X64_USER245_Handler(void) { }
-void __RME_X64_USER246_Handler(void) { }
-void __RME_X64_USER247_Handler(void) { }
-void __RME_X64_USER248_Handler(void) { }
-void __RME_X64_USER249_Handler(void) { }
-void __RME_X64_USER250_Handler(void) { }
-void __RME_X64_USER251_Handler(void) { }
-void __RME_X64_USER252_Handler(void) { }
-void __RME_X64_USER253_Handler(void) { }
-void __RME_X64_USER254_Handler(void) { }
-void __RME_X64_USER255_Handler(void) { }
-
-/* End Function:__RME_X64_USER_Handler */
-
-/* Function: SysTick_Handler **************************************************/
-void SysTick_Handler(void)
-{
-
-}
-
-/* End Function: SysTick_Handler **********************************************/
-
-/* Function: __RME_X64_IDT_Load ***********************************************/
-void __RME_X64_IDT_Load(rme_ptr_t* IDTR)
-{
-
-}
-
-/* End Function: __RME_X64_IDT_Load *******************************************/
-
-/* Function: __RME_X64_GDT_Load ***********************************************/
-void __RME_X64_GDT_Load(rme_ptr_t* GDTR)
-{
-
-}
-
-/* End Function: __RME_X64_GDT_Load *******************************************/
-
-/* Function: __RME_X64_TSS_Load ***********************************************/
-void __RME_X64_TSS_Load(rme_ptr_t TSS)
-{
-
-}
-
-/* End Function: __RME_X64_TSS_Load *******************************************/
-
-/* Function: __RME_X64_Write_MSR ***********************************************/
-void __RME_X64_Write_MSR(rme_ptr_t MSR, rme_ptr_t Value)
-{
-
-}
-
-/* End Function: __RME_X64_Write_MSR *******************************************/
-
-/* Function: __RME_X64_Read_MSR ***********************************************/
-rme_ptr_t __RME_X64_Read_MSR(rme_ptr_t MSR)
-{
-    return 0;
-}
-
-/* End Function: __RME_X64_Read_MSR *******************************************/
-
-/* Function: __RME_X64_In ******************************************************/
-rme_ptr_t __RME_X64_In(rme_ptr_t Port)
-{
-    return 0;
-}
-
-/* End Function: __RME_X64_In **************************************************/
-
-/* Function: __RME_X64_Out *****************************************************/
-void __RME_X64_Out(rme_ptr_t Port, rme_ptr_t Data)
-{
-
-}
-
-/* End Function: __RME_X64_Out **************************************************/
-
-/* Function: __RME_X64_SMP_Boot_32 ********************************************/
-void __RME_X64_SMP_Boot_32(void)
-{
-
-}
-
-/* End Function: __RME_X64_SMP_Boot_32 ******************************************/
-
-/* Function: SVC_Handler *******************************************************/
-void SVC_Handler(void)
-{
-
-}
-
-/* End Function: SVC_Handler ***************************************************
-
-/* Function: __RME_X64_CPUID_Get **********************************************/
-rme_ptr_t __RME_X64_CPUID_Get(rme_ptr_t EAX, rme_ptr_t* EBX, rme_ptr_t* ECX, rme_ptr_t* EDX)
-{
-    return 0;
-}
-
-/* End Function: __RME_X64_CPUID_Get ******************************************/
-
+// /* Function:__RME_X64_FAULT_DE_Handler */
+// void __RME_X64_FAULT_DE_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_DE_Handler */
+//
+// /* Function:__RME_X64_TRAP_DB_Handler */
+// void __RME_X64_TRAP_DB_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_TRAP_DB_Handler */
+//
+// /* Function:__RME_X64_INT_NMI_Handler */
+// void __RME_X64_INT_NMI_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_INT_NMI_Handler */
+//
+// /* Function:__RME_X64_TRAP_BP_Handler */
+// void __RME_X64_TRAP_BP_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_TRAP_BP_Handler */
+//
+// /* Function:__RME_X64_TRAP_OF_Handler */
+// void __RME_X64_TRAP_OF_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_TRAP_OF_Handler */
+//
+// /* Function:__RME_X64_FAULT_BR_Handler */
+// void __RME_X64_FAULT_BR_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_BR_Handler */
+//
+// /* Function:__RME_X64_FAULT_UD_Handler */
+// void __RME_X64_FAULT_UD_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_UD_Handler */
+//
+// /* Function:__RME_X64_FAULT_NM_Handler */
+// void __RME_X64_FAULT_NM_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_NM_Handler */
+//
+// /* Function:__RME_X64_ABORT_DF_Handler */
+// void __RME_X64_ABORT_DF_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_ABORT_DF_Handler */
+//
+// /* Function:__RME_X64_ABORT_OLD_MF_Handler */
+// void __RME_X64_ABORT_OLD_MF_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_ABORT_OLD_MF_Handler */
+//
+// /* Function:__RME_X64_FAULT_TS_Handler */
+// void __RME_X64_FAULT_TS_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_TS_Handler */
+//
+// /* Function:__RME_X64_FAULT_NP_Handler */
+// void __RME_X64_FAULT_NP_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_NP_Handler */
+//
+// /* Function:__RME_X64_FAULT_SS_Handler */
+// void __RME_X64_FAULT_SS_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_SS_Handler */
+//
+// /* Function:__RME_X64_FAULT_GP_Handler */
+// void __RME_X64_FAULT_GP_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_GP_Handler */
+//
+// /* Function:__RME_X64_FAULT_PF_Handler */
+// void __RME_X64_FAULT_PF_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_PF_Handler */
+//
+// /* Function:__RME_X64_FAULT_MF_Handler */
+// void __RME_X64_FAULT_MF_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_MF_Handler */
+//
+// /* Function:__RME_X64_FAULT_AC_Handler */
+// void __RME_X64_FAULT_AC_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_AC_Handler */
+//
+// /* Function:__RME_X64_ABORT_MC_Handler */
+// void __RME_X64_ABORT_MC_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_ABORT_MC_Handler */
+//
+// /* Function:__RME_X64_FAULT_XM_Handler */
+// void __RME_X64_FAULT_XM_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_XM_Handler */
+//
+// /* Function:__RME_X64_FAULT_VE_Handler */
+// void __RME_X64_FAULT_VE_Handler(void)
+// {
+// }
+//
+// /* End Function:__RME_X64_FAULT_VE_Handler */
+//
+// /* Function:__RME_X64_USER_Handler */
+// void __RME_X64_USER32_Handler(void) { }
+// void __RME_X64_USER33_Handler(void) { }
+// void __RME_X64_USER34_Handler(void) { }
+// void __RME_X64_USER35_Handler(void) { }
+// void __RME_X64_USER36_Handler(void) { }
+// void __RME_X64_USER37_Handler(void) { }
+// void __RME_X64_USER38_Handler(void) { }
+// void __RME_X64_USER39_Handler(void) { }
+// void __RME_X64_USER40_Handler(void) { }
+// void __RME_X64_USER41_Handler(void) { }
+// void __RME_X64_USER42_Handler(void) { }
+// void __RME_X64_USER43_Handler(void) { }
+// void __RME_X64_USER44_Handler(void) { }
+// void __RME_X64_USER45_Handler(void) { }
+// void __RME_X64_USER46_Handler(void) { }
+// void __RME_X64_USER47_Handler(void) { }
+// void __RME_X64_USER48_Handler(void) { }
+// void __RME_X64_USER49_Handler(void) { }
+// void __RME_X64_USER50_Handler(void) { }
+// void __RME_X64_USER51_Handler(void) { }
+// void __RME_X64_USER52_Handler(void) { }
+// void __RME_X64_USER53_Handler(void) { }
+// void __RME_X64_USER54_Handler(void) { }
+// void __RME_X64_USER55_Handler(void) { }
+// void __RME_X64_USER56_Handler(void) { }
+// void __RME_X64_USER57_Handler(void) { }
+// void __RME_X64_USER58_Handler(void) { }
+// void __RME_X64_USER59_Handler(void) { }
+// void __RME_X64_USER60_Handler(void) { }
+// void __RME_X64_USER61_Handler(void) { }
+// void __RME_X64_USER62_Handler(void) { }
+// void __RME_X64_USER63_Handler(void) { }
+// void __RME_X64_USER64_Handler(void) { }
+// void __RME_X64_USER65_Handler(void) { }
+// void __RME_X64_USER66_Handler(void) { }
+// void __RME_X64_USER67_Handler(void) { }
+// void __RME_X64_USER68_Handler(void) { }
+// void __RME_X64_USER69_Handler(void) { }
+// void __RME_X64_USER70_Handler(void) { }
+// void __RME_X64_USER71_Handler(void) { }
+// void __RME_X64_USER72_Handler(void) { }
+// void __RME_X64_USER73_Handler(void) { }
+// void __RME_X64_USER74_Handler(void) { }
+// void __RME_X64_USER75_Handler(void) { }
+// void __RME_X64_USER76_Handler(void) { }
+// void __RME_X64_USER77_Handler(void) { }
+// void __RME_X64_USER78_Handler(void) { }
+// void __RME_X64_USER79_Handler(void) { }
+// void __RME_X64_USER80_Handler(void) { }
+// void __RME_X64_USER81_Handler(void) { }
+// void __RME_X64_USER82_Handler(void) { }
+// void __RME_X64_USER83_Handler(void) { }
+// void __RME_X64_USER84_Handler(void) { }
+// void __RME_X64_USER85_Handler(void) { }
+// void __RME_X64_USER86_Handler(void) { }
+// void __RME_X64_USER87_Handler(void) { }
+// void __RME_X64_USER88_Handler(void) { }
+// void __RME_X64_USER89_Handler(void) { }
+// void __RME_X64_USER90_Handler(void) { }
+// void __RME_X64_USER91_Handler(void) { }
+// void __RME_X64_USER92_Handler(void) { }
+// void __RME_X64_USER93_Handler(void) { }
+// void __RME_X64_USER94_Handler(void) { }
+// void __RME_X64_USER95_Handler(void) { }
+// void __RME_X64_USER96_Handler(void) { }
+// void __RME_X64_USER97_Handler(void) { }
+// void __RME_X64_USER98_Handler(void) { }
+// void __RME_X64_USER99_Handler(void) { }
+// void __RME_X64_USER100_Handler(void) { }
+// void __RME_X64_USER101_Handler(void) { }
+// void __RME_X64_USER102_Handler(void) { }
+// void __RME_X64_USER103_Handler(void) { }
+// void __RME_X64_USER104_Handler(void) { }
+// void __RME_X64_USER105_Handler(void) { }
+// void __RME_X64_USER106_Handler(void) { }
+// void __RME_X64_USER107_Handler(void) { }
+// void __RME_X64_USER108_Handler(void) { }
+// void __RME_X64_USER109_Handler(void) { }
+// void __RME_X64_USER110_Handler(void) { }
+// void __RME_X64_USER111_Handler(void) { }
+// void __RME_X64_USER112_Handler(void) { }
+// void __RME_X64_USER113_Handler(void) { }
+// void __RME_X64_USER114_Handler(void) { }
+// void __RME_X64_USER115_Handler(void) { }
+// void __RME_X64_USER116_Handler(void) { }
+// void __RME_X64_USER117_Handler(void) { }
+// void __RME_X64_USER118_Handler(void) { }
+// void __RME_X64_USER119_Handler(void) { }
+// void __RME_X64_USER120_Handler(void) { }
+// void __RME_X64_USER121_Handler(void) { }
+// void __RME_X64_USER122_Handler(void) { }
+// void __RME_X64_USER123_Handler(void) { }
+// void __RME_X64_USER124_Handler(void) { }
+// void __RME_X64_USER125_Handler(void) { }
+// void __RME_X64_USER126_Handler(void) { }
+// void __RME_X64_USER127_Handler(void) { }
+// void __RME_X64_USER128_Handler(void) { }
+// void __RME_X64_USER129_Handler(void) { }
+// void __RME_X64_USER130_Handler(void) { }
+// void __RME_X64_USER131_Handler(void) { }
+// void __RME_X64_USER132_Handler(void) { }
+// void __RME_X64_USER133_Handler(void) { }
+// void __RME_X64_USER134_Handler(void) { }
+// void __RME_X64_USER135_Handler(void) { }
+// void __RME_X64_USER136_Handler(void) { }
+// void __RME_X64_USER137_Handler(void) { }
+// void __RME_X64_USER138_Handler(void) { }
+// void __RME_X64_USER139_Handler(void) { }
+// void __RME_X64_USER140_Handler(void) { }
+// void __RME_X64_USER141_Handler(void) { }
+// void __RME_X64_USER142_Handler(void) { }
+// void __RME_X64_USER143_Handler(void) { }
+// void __RME_X64_USER144_Handler(void) { }
+// void __RME_X64_USER145_Handler(void) { }
+// void __RME_X64_USER146_Handler(void) { }
+// void __RME_X64_USER147_Handler(void) { }
+// void __RME_X64_USER148_Handler(void) { }
+// void __RME_X64_USER149_Handler(void) { }
+// void __RME_X64_USER150_Handler(void) { }
+// void __RME_X64_USER151_Handler(void) { }
+// void __RME_X64_USER152_Handler(void) { }
+// void __RME_X64_USER153_Handler(void) { }
+// void __RME_X64_USER154_Handler(void) { }
+// void __RME_X64_USER155_Handler(void) { }
+// void __RME_X64_USER156_Handler(void) { }
+// void __RME_X64_USER157_Handler(void) { }
+// void __RME_X64_USER158_Handler(void) { }
+// void __RME_X64_USER159_Handler(void) { }
+// void __RME_X64_USER160_Handler(void) { }
+// void __RME_X64_USER161_Handler(void) { }
+// void __RME_X64_USER162_Handler(void) { }
+// void __RME_X64_USER163_Handler(void) { }
+// void __RME_X64_USER164_Handler(void) { }
+// void __RME_X64_USER165_Handler(void) { }
+// void __RME_X64_USER166_Handler(void) { }
+// void __RME_X64_USER167_Handler(void) { }
+// void __RME_X64_USER168_Handler(void) { }
+// void __RME_X64_USER169_Handler(void) { }
+// void __RME_X64_USER170_Handler(void) { }
+// void __RME_X64_USER171_Handler(void) { }
+// void __RME_X64_USER172_Handler(void) { }
+// void __RME_X64_USER173_Handler(void) { }
+// void __RME_X64_USER174_Handler(void) { }
+// void __RME_X64_USER175_Handler(void) { }
+// void __RME_X64_USER176_Handler(void) { }
+// void __RME_X64_USER177_Handler(void) { }
+// void __RME_X64_USER178_Handler(void) { }
+// void __RME_X64_USER179_Handler(void) { }
+// void __RME_X64_USER180_Handler(void) { }
+// void __RME_X64_USER181_Handler(void) { }
+// void __RME_X64_USER182_Handler(void) { }
+// void __RME_X64_USER183_Handler(void) { }
+// void __RME_X64_USER184_Handler(void) { }
+// void __RME_X64_USER185_Handler(void) { }
+// void __RME_X64_USER186_Handler(void) { }
+// void __RME_X64_USER187_Handler(void) { }
+// void __RME_X64_USER188_Handler(void) { }
+// void __RME_X64_USER189_Handler(void) { }
+// void __RME_X64_USER190_Handler(void) { }
+// void __RME_X64_USER191_Handler(void) { }
+// void __RME_X64_USER192_Handler(void) { }
+// void __RME_X64_USER193_Handler(void) { }
+// void __RME_X64_USER194_Handler(void) { }
+// void __RME_X64_USER195_Handler(void) { }
+// void __RME_X64_USER196_Handler(void) { }
+// void __RME_X64_USER197_Handler(void) { }
+// void __RME_X64_USER198_Handler(void) { }
+// void __RME_X64_USER199_Handler(void) { }
+// void __RME_X64_USER200_Handler(void) { }
+// void __RME_X64_USER201_Handler(void) { }
+// void __RME_X64_USER202_Handler(void) { }
+// void __RME_X64_USER203_Handler(void) { }
+// void __RME_X64_USER204_Handler(void) { }
+// void __RME_X64_USER205_Handler(void) { }
+// void __RME_X64_USER206_Handler(void) { }
+// void __RME_X64_USER207_Handler(void) { }
+// void __RME_X64_USER208_Handler(void) { }
+// void __RME_X64_USER209_Handler(void) { }
+// void __RME_X64_USER210_Handler(void) { }
+// void __RME_X64_USER211_Handler(void) { }
+// void __RME_X64_USER212_Handler(void) { }
+// void __RME_X64_USER213_Handler(void) { }
+// void __RME_X64_USER214_Handler(void) { }
+// void __RME_X64_USER215_Handler(void) { }
+// void __RME_X64_USER216_Handler(void) { }
+// void __RME_X64_USER217_Handler(void) { }
+// void __RME_X64_USER218_Handler(void) { }
+// void __RME_X64_USER219_Handler(void) { }
+// void __RME_X64_USER220_Handler(void) { }
+// void __RME_X64_USER221_Handler(void) { }
+// void __RME_X64_USER222_Handler(void) { }
+// void __RME_X64_USER223_Handler(void) { }
+// void __RME_X64_USER224_Handler(void) { }
+// void __RME_X64_USER225_Handler(void) { }
+// void __RME_X64_USER226_Handler(void) { }
+// void __RME_X64_USER227_Handler(void) { }
+// void __RME_X64_USER228_Handler(void) { }
+// void __RME_X64_USER229_Handler(void) { }
+// void __RME_X64_USER230_Handler(void) { }
+// void __RME_X64_USER231_Handler(void) { }
+// void __RME_X64_USER232_Handler(void) { }
+// void __RME_X64_USER233_Handler(void) { }
+// void __RME_X64_USER234_Handler(void) { }
+// void __RME_X64_USER235_Handler(void) { }
+// void __RME_X64_USER236_Handler(void) { }
+// void __RME_X64_USER237_Handler(void) { }
+// void __RME_X64_USER238_Handler(void) { }
+// void __RME_X64_USER239_Handler(void) { }
+// void __RME_X64_USER240_Handler(void) { }
+// void __RME_X64_USER241_Handler(void) { }
+// void __RME_X64_USER242_Handler(void) { }
+// void __RME_X64_USER243_Handler(void) { }
+// void __RME_X64_USER244_Handler(void) { }
+// void __RME_X64_USER245_Handler(void) { }
+// void __RME_X64_USER246_Handler(void) { }
+// void __RME_X64_USER247_Handler(void) { }
+// void __RME_X64_USER248_Handler(void) { }
+// void __RME_X64_USER249_Handler(void) { }
+// void __RME_X64_USER250_Handler(void) { }
+// void __RME_X64_USER251_Handler(void) { }
+// void __RME_X64_USER252_Handler(void) { }
+// void __RME_X64_USER253_Handler(void) { }
+// void __RME_X64_USER254_Handler(void) { }
+// void __RME_X64_USER255_Handler(void) { }
+//
+// /* End Function:__RME_X64_USER_Handler */
+//
+// /* Function: SysTick_Handler **************************************************/
+// void SysTick_Handler(void)
+// {
+//
+// }
+//
+// /* End Function: SysTick_Handler **********************************************/
+//
+// /* Function: __RME_X64_IDT_Load ***********************************************/
+// void __RME_X64_IDT_Load(rme_ptr_t* IDTR)
+// {
+//
+// }
+//
+// /* End Function: __RME_X64_IDT_Load *******************************************/
+//
+// /* Function: __RME_X64_GDT_Load ***********************************************/
+// void __RME_X64_GDT_Load(rme_ptr_t* GDTR)
+// {
+//
+// }
+//
+// /* End Function: __RME_X64_GDT_Load *******************************************/
+//
+// /* Function: __RME_X64_TSS_Load ***********************************************/
+// void __RME_X64_TSS_Load(rme_ptr_t TSS)
+// {
+//
+// }
+//
+// /* End Function: __RME_X64_TSS_Load *******************************************/
+//
+// /* Function: __RME_X64_Write_MSR ***********************************************/
+// void __RME_X64_Write_MSR(rme_ptr_t MSR, rme_ptr_t Value)
+// {
+//
+// }
+//
+// /* End Function: __RME_X64_Write_MSR *******************************************/
+//
+// /* Function: __RME_X64_Read_MSR ***********************************************/
+// rme_ptr_t __RME_X64_Read_MSR(rme_ptr_t MSR)
+// {
+//     return 0;
+// }
+//
+// /* End Function: __RME_X64_Read_MSR *******************************************/
+//
+// /* Function: __RME_X64_In ******************************************************/
+// rme_ptr_t __RME_X64_In(rme_ptr_t Port)
+// {
+//     return 0;
+// }
+//
+// /* End Function: __RME_X64_In **************************************************/
+//
+// /* Function: __RME_X64_Out *****************************************************/
+// void __RME_X64_Out(rme_ptr_t Port, rme_ptr_t Data)
+// {
+//
+// }
+//
+// /* End Function: __RME_X64_Out **************************************************/
+//
+// /* Function: __RME_X64_SMP_Boot_32 ********************************************/
+// void __RME_X64_SMP_Boot_32(void)
+// {
+//
+// }
+//
+// /* End Function: __RME_X64_SMP_Boot_32 ******************************************/
+//
+// /* Function: SVC_Handler *******************************************************/
+// void SVC_Handler(void)
+// {
+//
+// }
+//
+// /* End Function: SVC_Handler ***************************************************
+//
+// /* Function: __RME_X64_CPUID_Get **********************************************/
+// rme_ptr_t __RME_X64_CPUID_Get(rme_ptr_t EAX, rme_ptr_t* EBX, rme_ptr_t* ECX, rme_ptr_t* EDX)
+// {
+//     return 0;
+// }
+//
+// /* End Function: __RME_X64_CPUID_Get ******************************************/
+//
 /* Function: __RME_List_Crt ****************************************************/
 void __RME_List_Crt(struct RME_List* Head)
 {
@@ -525,7 +527,7 @@ void __RME_List_Crt(struct RME_List* Head)
 }
 
 /* End Function: __RME_List_Crt **********************************************/
-
+//
 /* Function: __RME_List_Ins ****************************************************/
 void __RME_List_Ins(struct RME_List* New, struct RME_List* Prev, struct RME_List* Next)
 {
@@ -541,50 +543,50 @@ void __RME_List_Del(struct RME_List* Prev, struct RME_List* Next)
 }
 
 /* End Function: __RME_List_Del **********************************************/
-
-/* Function: SysTick_SMP_Handler ************************************************/
-void SysTick_SMP_Handler(void)
-{
-
-}
-
-/* End Function: SysTick_SMP_Handler ******************************************/
-
-/* Struct: __RME_X64_Kern_Pgt  RME_X64_Kpgt************************************************/
-
-struct __RME_X64_Kern_Pgt RME_X64_Kpgt;
-
-/* End Struct: __RME_X64_Kern_Pgt  RME_X64_Kpgt************************************************/
-
-/* Function: __RME_X64_CPU_Local_Get ******************************************/
-struct RME_CPU_Local* __RME_X64_CPU_Local_Get()
-{
-    return 0;
-};
-
-/* End Function: __RME_X64_CPU_Local_Get **************************************/
-
-/* Function: __RME_Enable_Int ***********************************************/
-void __RME_Enable_Int(void)
-{
-
-}
-
-/* End Function: __RME_Enable_Int *******************************************/
-
-/* Nums: __RME_X64_Kern_Boot_Stack ***********************************************/
-
-rme_ptr_t __RME_X64_Kern_Boot_Stack[0]={};
-
-/* Nums: __RME_X64_Kern_Boot_Stack *******************************************/
-
-/* Function: _RME_Kmain ******************************************************/
-void _RME_Kmain(rme_ptr_t Stack)
-{
-
-}
-
-/* End Function: _RME_Kmain ***************************************************/
+//
+// /* Function: SysTick_SMP_Handler ************************************************/
+// void SysTick_SMP_Handler(void)
+// {
+//
+// }
+//
+// /* End Function: SysTick_SMP_Handler ******************************************/
+//
+// /* Struct: __RME_X64_Kern_Pgt  RME_X64_Kpgt************************************************/
+//
+// struct __RME_X64_Kern_Pgt RME_X64_Kpgt;
+//
+// /* End Struct: __RME_X64_Kern_Pgt  RME_X64_Kpgt************************************************/
+//
+// /* Function: __RME_X64_CPU_Local_Get ******************************************/
+// struct RME_CPU_Local* __RME_X64_CPU_Local_Get()
+// {
+//     return 0;
+// };
+//
+// /* End Function: __RME_X64_CPU_Local_Get **************************************/
+//
+// /* Function: __RME_Enable_Int ***********************************************/
+// void __RME_Enable_Int(void)
+// {
+//
+// }
+//
+// /* End Function: __RME_Enable_Int *******************************************/
+//
+// /* Nums: __RME_X64_Kern_Boot_Stack ***********************************************/
+//
+// rme_ptr_t __RME_X64_Kern_Boot_Stack[0]={};
+//
+// /* Nums: __RME_X64_Kern_Boot_Stack *******************************************/
+//
+// /* Function: _RME_Kmain ******************************************************/
+// void _RME_Kmain(rme_ptr_t Stack)
+// {
+//
+// }
+//
+// /* End Function: _RME_Kmain ***************************************************/
 
 /* Function: __RME_Inv_Retval_Set *******************************************/
 void __RME_Inv_Retval_Set(struct RME_Reg_Struct* Reg, rme_ret_t Retval)
@@ -600,14 +602,14 @@ rme_ret_t __RME_Kfn_Handler(struct RME_Cap_Cpt* Cpt, struct RME_Reg_Struct* Reg,
     return 0;
 }
 /* End Function: __RME_Kfn_Handler ********************************************/
-
-/* Function: __RME_Enter_User_Mode ******************************************/
-void __RME_Enter_User_Mode(rme_ptr_t Entry_Addr, rme_ptr_t Stack_Addr, rme_ptr_t CPUID)
-{
-
-}
-
-/* End Function: __RME_Enter_User_Mode **************************************/
+//
+// /* Function: __RME_Enter_User_Mode ******************************************/
+// void __RME_Enter_User_Mode(rme_ptr_t Entry_Addr, rme_ptr_t Stack_Addr, rme_ptr_t CPUID)
+// {
+//
+// }
+//
+// /* End Function: __RME_Enter_User_Mode **************************************/
 
 /* Function:__RME_Putchar *****************************************************
 Description : Output a character to console. In Cortex-M, under most circumstances, 
@@ -2833,10 +2835,10 @@ rme_ptr_t __RME_Pgt_Walk(struct RME_Cap_Pgt* Pgt_Op, rme_ptr_t Vaddr, rme_ptr_t*
 
 /*Function:__RME_X64_Pgt_Set*/
 
-void __RME_X64_Pgt_Set(rme_ptr_t Pgt)
+/*void __RME_X64_Pgt_Set(rme_ptr_t Pgt)
 {
 
-}
+}*/
 /* End Function:__RME_X64_Pgt_Set*/
 
 /*Function:__RME_Svc_Param_Get*/
