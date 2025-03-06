@@ -55,6 +55,7 @@ Return      : int - This function never returns.
 ******************************************************************************/
 int main(rme_ptr_t MBInfo)
 {
+    RME_Int_Print(1111);
     RME_X64_MBInfo=(struct multiboot_info*)(MBInfo+RME_X64_VA_BASE);
     /* The main function of the kernel - we will start our kernel boot here */
     _RME_Kmain(RME_KOM_STACK_ADDR);
@@ -1618,13 +1619,13 @@ void __RME_X64_Timer_Init(void)
 }
 /* End Function:__RME_X64_Timer_Init *****************************************/
 
-/* Function:__RME_Low_Level_Init **********************************************
+/* Function:__RME_Lowlvl_Init **********************************************
 Description : Initialize the low-level hardware.
 Input       : None.
 Output      : None.
 Return      : rme_ptr_t - Always 0.
 ******************************************************************************/
-rme_ptr_t __RME_Low_Level_Init(void)
+rme_ptr_t __RME_Lowlvl_Init(void)
 {
     /* We are here now ! */
     __RME_X64_UART_Init();
@@ -1637,7 +1638,7 @@ rme_ptr_t __RME_Low_Level_Init(void)
 
     return 0;
 }
-/* End Function:__RME_Low_Level_Init *****************************************/
+/* End Function:__RME_Lowlvl_Init *****************************************/
 
 /* Function:__RME_Pgt_Kom_Init *********************************************
 Description : Initialize the kernel mapping tables, so it can be added to all the

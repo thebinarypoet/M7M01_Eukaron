@@ -11,8 +11,8 @@ Description: The configuration file for x64 profile settings.
 /* End Config Includes *******************************************************/
 #define RME_EXTERN                      EXTERN
 #define RME_PREEMPT_PRIO_NUM         (64U)
-#define RME_KOM_VA_BASE              0xFFFF800000000000ULL
-#define RME_KOM_VA_SIZE                0x1000
+#define RME_KOM_VA_BASE              0xFFFFFFFF81000000
+#define RME_KOM_VA_SIZE                0x30000000U
 #define RME_KOT_WORD_NUM                0
 #define RME_KOT_SLOT_NUM                0
 #define RME_TIMESTAMP                  (1U)

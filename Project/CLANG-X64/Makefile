@@ -3,10 +3,10 @@ TARGET=RME
 CPU=-m64
 
 CC=gcc
-CFLAGS=-O3 -fmessage-length=0 -w
+CFLAGS=-O3 -fmessage-length=0 -w -fPIC -ffreestanding
 WFLAGS=-Wall
 DFLAGS=-g3
-LDFLAGS=-ffreestanding -nostdlib
+LDFLAGS=-T ../../Include/Platform/X64/rme_platform_x64.ld -nostartfiles -nostdlib -Wl,--no-relax
 OBJDIR=Object
 # End Config ##################################################################
 

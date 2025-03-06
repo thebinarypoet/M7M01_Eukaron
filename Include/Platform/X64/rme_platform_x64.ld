@@ -20,7 +20,7 @@ SECTIONS
 	PROVIDE(begin = .);
 
 	.text : AT(__RME_X64_Mboot_Load_Addr) {
-	    *platform_x64_asm.o(.text .rela.text .stub .text.* .gnu.linkonce.t.*)
+	    *platform_x64_gcc.o(.text .rela.text .stub .text.* .gnu.linkonce.t.*)
 		*(.text .rela.text .stub .text.* .gnu.linkonce.t.*)
 	}
 	

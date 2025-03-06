@@ -182,7 +182,12 @@ static INLINE rme_ptr_t _RME_X64_MSB_Get(rme_ptr_t Val)
 
 static INLINE rme_ptr_t __RME_Int_Disable()
 {
-
+	rme_u64_t Ret;
+	__asm__ __volatile__ (
+		"cli\n\t"
+		"retq\n\t"
+	);
+	return Ret;
 }
 
 static INLINE rme_ptr_t __RME_Int_Enable()
@@ -191,12 +196,6 @@ static INLINE rme_ptr_t __RME_Int_Enable()
 }
 
 static INLINE rme_ptr_t __RME_User_Enter()
-{
-
-}
-
-
-static INLINE rme_ptr_t __RME_Lowlvl_Init()
 {
 
 }
@@ -1481,7 +1480,7 @@ EXTERN void ___RME_X64_Thd_Cop_Restore(struct RME_Cop_Struct* Cop_Reg);
 /* Booting */
 EXTERN void _RME_Kmain(rme_ptr_t Stack);
 EXTERN void __RME_Enter_User_Mode(rme_ptr_t Entry_Addr, rme_ptr_t Stack_Addr, rme_ptr_t CPUID);
-__EXTERN__ rme_ptr_t __RME_Low_Level_Init(void);
+__EXTERN__ rme_ptr_t __RME_Lowlvl_Init(void);
 __EXTERN__ rme_ptr_t __RME_Boot(void);
 __EXTERN__ void __RME_Reboot(void);
 __EXTERN__ void __RME_Shutdown(void);
