@@ -1082,7 +1082,6 @@ rme_ret_t RME_Kmain(void)
     RME_Int_Print(1111);
     __RME_Int_Disable();
     /* Some low-level kernel assertions */
-    RME_Str_Print("8888888");
     _RME_Lowlvl_Check();
     /* Hardware low-level init */
     __RME_Lowlvl_Init();
@@ -1178,7 +1177,7 @@ void _RME_Svc_Handler(struct RME_Reg_Struct* Reg)
      * because it can't be deleted anyway */
     Thd_Cur=RME_CPU_LOCAL()->Thd_Cur;
     Inv_Top=RME_INVSTK_TOP(Thd_Cur);
-    if(Inv_Top==RME_NULL)
+    if(Inv_Top==(void*)RME_NULL)
     {
         RME_COV_MARKER();
         
@@ -4527,7 +4526,7 @@ static void _RME_Run_Notif(struct RME_Thd_Struct* Thd)
     }
 
     /* If this guy have an endpoint, send to it */
-    if(Thd->Sched.Sched_Sig!=0U)
+    if(Thd->Sched.Sched_Sig!=(void*)0U)
     {
         RME_COV_MARKER();
         _RME_Kern_Snd(Thd->Sched.Sched_Sig);
@@ -4556,7 +4555,7 @@ rme_ptr_t _RME_Thd_Pgt(struct RME_Thd_Struct* Thd)
     
     Inv_Top=RME_INVSTK_TOP(Thd);
     
-    if(Inv_Top==RME_NULL)
+    if(Inv_Top==(void*)RME_NULL)
     {
         RME_COV_MARKER();
 
@@ -5667,7 +5666,7 @@ static rme_ret_t _RME_Thd_Sched_Bind(struct RME_Cap_Cpt* Cpt,
                (Thread->Sched.State==RME_THD_EXCPEND));
 
     /* Tie the signal endpoint to it if not zero */
-    if(Sig_Op==0U)
+    if(Sig_Op==(void*)0U)
     {
         RME_COV_MARKER();
 
@@ -5777,7 +5776,7 @@ static rme_ret_t _RME_Thd_Sched_Free(struct RME_Cap_Cpt* Cpt,
     }
 
     /* If we have an scheduler event endpoint, release it */
-    if(Thread->Sched.Sched_Sig!=RME_NULL)
+    if(Thread->Sched.Sched_Sig!=(void*)RME_NULL)
     {
         RME_COV_MARKER();
 
@@ -6844,7 +6843,7 @@ static rme_ret_t _RME_Sig_Del(struct RME_Cap_Cpt* Cpt,
     RME_CAP_DEL_CHECK(Sig_Del,Type_Stat,RME_CAP_TYPE_SIG);
 
     /* Check if the signal endpoint is currently used and cannot be deleted */
-    if(Sig_Del->Thd!=0U)
+    if(Sig_Del->Thd!=(void*)0U)
     {
         RME_COV_MARKER();
 
@@ -6882,7 +6881,7 @@ void _RME_Kern_High(struct RME_Reg_Struct* Reg,
     struct RME_Thd_Struct* Thd_Cur;
 
     Thd_New=_RME_Run_High(Local);
-    RME_ASSERT(Thd_New!=RME_NULL);
+    RME_ASSERT(Thd_New!=(void*)RME_NULL);
     Thd_Cur=Local->Thd_Cur;
 
     /* Are these two threads the same? */
@@ -6948,7 +6947,7 @@ rme_ret_t _RME_Kern_Snd(struct RME_Cap_Sig* Cap_Sig)
     Thd_Sig=Cap_Sig->Thd;
     
     /* If and only if we are calling from the same core do we unblock */
-    if(Thd_Sig!=RME_NULL)
+    if(Thd_Sig!=(void*)RME_NULL)
     {
         RME_COV_MARKER();
 
@@ -7065,7 +7064,7 @@ static rme_ret_t _RME_Sig_Snd(struct RME_Cap_Cpt* Cpt,
     Thd_Rcv=Sig_Root->Thd;
 
     /* If and only if we are calling from the same core do we unblock */
-    if(Thd_Rcv!=RME_NULL)
+    if(Thd_Rcv!=(void*)RME_NULL)
     {
         RME_COV_MARKER();
 
@@ -7230,7 +7229,7 @@ static rme_ret_t _RME_Sig_Rcv(struct RME_Cap_Cpt* Cpt,
     
     /* See if we can receive on that endpoint - if someone blocks on it, we 
      * must wait for it to unblock before we can proceed. */
-    if(Sig_Root->Thd!=RME_NULL)
+    if(Sig_Root->Thd!=(void*)RME_NULL)
     {
         RME_COV_MARKER();
 
@@ -7489,7 +7488,7 @@ static rme_ret_t _RME_Inv_Del(struct RME_Cap_Cpt* Cpt,
     Invocation=RME_CAP_GETOBJ(Inv_Del,struct RME_Inv_Struct*);
     
     /* See if the invocation is currently being used. If yes, we cannot delete it */
-    if(Invocation->Thd_Act!=RME_NULL)
+    if(Invocation->Thd_Act!=(void*)RME_NULL)
     {
         RME_COV_MARKER();
 
@@ -7604,7 +7603,7 @@ static rme_ret_t _RME_Inv_Act(struct RME_Cap_Cpt* Cpt,
     Invocation=RME_CAP_GETOBJ(Inv_Op,struct RME_Inv_Struct*);
     /* Check if this invocation port is already active */
     Thd_Act=Invocation->Thd_Act;
-    if(RME_UNLIKELY(Thd_Act!=0U))
+    if(RME_UNLIKELY(Thd_Act!=(void*)0U))
     {
         RME_COV_MARKER();
 
@@ -7684,7 +7683,7 @@ static rme_ret_t _RME_Inv_Ret(struct RME_Reg_Struct* Reg,
     /* See if we can return; If we can, get the structure */
     Thread=RME_CPU_LOCAL()->Thd_Cur;
     Invocation=RME_INVSTK_TOP(Thread);
-    if(RME_UNLIKELY(Invocation==RME_NULL))
+    if(RME_UNLIKELY(Invocation==(void*)RME_NULL))
     {
         RME_COV_MARKER();
 
@@ -7739,7 +7738,7 @@ static rme_ret_t _RME_Inv_Ret(struct RME_Reg_Struct* Reg,
 
     /* Same assumptions as in invocation activation */
     Invocation=RME_INVSTK_TOP(Thread);
-    if(Invocation!=RME_NULL)
+    if(Invocation!=(void*)RME_NULL)
     {
         RME_COV_MARKER();
         

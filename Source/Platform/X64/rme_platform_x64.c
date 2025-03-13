@@ -55,7 +55,6 @@ Return      : int - This function never returns.
 ******************************************************************************/
 int main(rme_ptr_t MBInfo)
 {
-    RME_Int_Print(1111);
     RME_X64_MBInfo=(struct multiboot_info*)(MBInfo+RME_X64_VA_BASE);
     /* The main function of the kernel - we will start our kernel boot here */
     _RME_Kmain(RME_KOM_STACK_ADDR);
@@ -621,12 +620,11 @@ Return      : rme_ptr_t - Always 0.
 ******************************************************************************/
 rme_ptr_t __RME_Putchar(char Char)
 {
-    if(RME_X64_UART_Exist==0)
-        return 0;
-
+    //if(RME_X64_UART_Exist==0)
+     //   return 0;
     /* Wait until we have transmitted */
-    while((__RME_X64_In(RME_X64_COM1+5)&0x20)==0);
 
+    while((__RME_X64_In(RME_X64_COM1+5)&0x20)==0);
     __RME_X64_Out(RME_X64_COM1, Char);
 
     return 0;

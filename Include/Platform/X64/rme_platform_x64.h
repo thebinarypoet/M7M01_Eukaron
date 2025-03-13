@@ -125,7 +125,7 @@ typedef rme_s64_t rme_ret_t;
 /* The virtual memory start address for the virtual machines - If no virtual machines is used, set to 0 */
 #define RME_HYP_VA_START                     0
 /* The size of the hypervisor reserved virtual memory */
-#define RME_HYP_SIZE                         0
+//#define RME_HYP_SIZE                         0
 /* The kernel object allocation table address - relocated */
 #define RME_KOT_VA_BASE                            ((rme_ptr_t*)0xFFFF800001000000)
 /* Atomic instructions - The oficial release replaces all these with inline
@@ -144,7 +144,7 @@ typedef rme_s64_t rme_ret_t;
 #define RME_MSB_GET(VAL)                     __RME_X64_MSB_Get(VAL)
 /* Inline assembly implementation */
 #else
-static INLINE rme_ptr_t _RME_X64_Comp_Swap(rme_ptr_t* Ptr, rme_ptr_t Old, rme_ptr_t New)
+static INLINE rme_ptr_t _RME_X64_Comp_Swap(volatile rme_ptr_t* Ptr, rme_ptr_t Old, rme_ptr_t New)
 {
 	rme_u8_t Zero;
 	__asm__ __volatile__("LOCK CMPXCHGQ %[New], %[Ptr]; SETZ %[Zero]"
@@ -153,7 +153,7 @@ static INLINE rme_ptr_t _RME_X64_Comp_Swap(rme_ptr_t* Ptr, rme_ptr_t Old, rme_pt
 	                     :"memory", "cc");
 	return (rme_ptr_t)Zero;
 }
-static INLINE rme_ptr_t _RME_X64_Fetch_Add(rme_ptr_t* Ptr, rme_cnt_t Addend)
+static INLINE rme_ptr_t _RME_X64_Fetch_Add(volatile rme_ptr_t* Ptr, rme_cnt_t Addend)
 {
 	__asm__ __volatile__("LOCK XADDQ %[Addend], %[Ptr]"
 	                     :[Ptr]"+m"(*Ptr), [Addend]"+r"(Addend)
@@ -192,12 +192,25 @@ static INLINE rme_ptr_t __RME_Int_Disable()
 
 static INLINE rme_ptr_t __RME_Int_Enable()
 {
-
+	rme_ptr_t Ret;
+	__asm__ __volatile__ (
+	"sti\n\t"
+	"retq\n\t"
+);
+	return Ret;
 }
 
 static INLINE rme_ptr_t __RME_User_Enter()
 {
-
+	rme_ptr_t Ret;
+	asm volatile (
+	"movq %1, %%rcx\n\t"
+	"movq %2, %%rsp\n\t"
+	"movq $0x3200, %%r11\n\t"
+	"movq %3, %%rdi\n\t"
+	"sysretq"
+);
+	return Ret;
 }
 
 #define RME_COMP_SWAP(PTR,OLD,NEW)           _RME_X64_Comp_Swap(PTR,OLD,NEW)

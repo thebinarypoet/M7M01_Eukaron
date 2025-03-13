@@ -1,2 +1,0 @@
-# typical desktop system, 1 numa node, 1 socket, 1 processors, 8GB RAM */
-qemu-system-x86_64 -serial vc:800x600 -net none -smp 1 -cpu IvyBridge,+vmx -m 8192 -cdrom ./RME.iso -monitor stdio -d int -D qemu-log.txt
