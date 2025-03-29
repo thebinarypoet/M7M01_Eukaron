@@ -92,6 +92,8 @@ typedef rme_s64_t rme_ret_t;
 /* Compiler "inline" keyword setting */
 #define INLINE                               inline
 /* Compiler likely & unlikely setting */
+#define likely(x)							(__builtin_expect(!!(x), 1))
+#define unlikely(X)							(__builtin_expect(!!(X), 0))
 #ifdef likely
 #define RME_LIKELY(X)                        (likely(X))
 #else
@@ -125,7 +127,7 @@ typedef rme_s64_t rme_ret_t;
 /* The virtual memory start address for the virtual machines - If no virtual machines is used, set to 0 */
 #define RME_HYP_VA_START                     0
 /* The size of the hypervisor reserved virtual memory */
-//#define RME_HYP_SIZE                         0
+#define RME_HYP_SIZE                         0
 /* The kernel object allocation table address - relocated */
 #define RME_KOT_VA_BASE                            ((rme_ptr_t*)0xFFFF800001000000)
 /* Atomic instructions - The oficial release replaces all these with inline
